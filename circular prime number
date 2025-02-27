@@ -1,0 +1,39 @@
+import java.util.*;
+public class Main{
+    public static void main(String[]args) {
+        int num=3873;
+        int temp=num;
+        int flag=1;
+       //-------------count the digit-----------------
+        int n=num,digit=0,pow=1;
+        boolean isCircularPrime = true;
+        while(n>0){
+          digit++;
+          pow*=10;
+          n/=10;
+
+        }pow/=10;
+        for(int i=1;i<digit;i++){
+            System.out.println("Rotation " + (i + 1) + ": " + temp);
+
+            if(temp<=1) {
+                isCircularPrime= false;
+                break;
+            }
+
+            boolean isPrime = true;
+        for(int j=2;j*j<=temp;j++){
+            if(temp%j==0){
+                isPrime=false;
+                break;
+            }
+
+
+        }int lastDigit = temp % 10;
+            temp = (lastDigit * pow) + (temp / 10);
+        }
+        if (isCircularPrime) {
+            System.out.println(num + " is a Circular Prime.");
+        } else {
+            System.out.println(num + " is NOT a Circular Prime.");
+        }
