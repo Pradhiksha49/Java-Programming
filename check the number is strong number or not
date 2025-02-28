@@ -10,6 +10,7 @@ public class Main {
                 for (int i = 1; i <= digit; i++) {
                     fact = fact * i; }
                 sum += fact;
-                n = n / 10; }
+                n = n / 10;
+                   }
             if(sum==j){
                System.out.println(j+"is a strong number");}}}}
