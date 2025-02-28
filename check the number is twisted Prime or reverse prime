@@ -5,14 +5,16 @@ public class Main{
         int reversed = rev(num);
         isPrime(reversed);
         System.out.println("reversed:"+reversed);
-}public static int rev(int num){
+}
+  public static int rev(int num){
             int digit=0,reverse=0;
             while(num>0){
                 digit=num%10;
                 reverse=reverse*10+digit;
                 num/=10;
             }
-            return reverse;}
+            return reverse;
+}
  public static void isPrime(int  num){
         if(num<=1){
             System.out.println(num + " is NOT a prime number.");
