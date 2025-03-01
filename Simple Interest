@@ -1,0 +1,10 @@
+public class Main{
+    public static void main(String[] args) {
+        float p=1000;
+        float time=2;
+         float rate=3;
+         float simple;
+         simple=(p*time*rate)/100;
+         System.out.println(simple);
+    }
+}
