@@ -1,0 +1,45 @@
+class Shape{
+    public void Area(){
+
+    }
+}
+class Rectangle extends Shape{
+int l;
+int b;
+    public void Area(int l,int b){
+      this.l=l;
+      this.b=b;
+      int result=l*b;
+      System.out.println("rectangle :"+result);
+    }
+}
+class Triangle extends Shape{
+    int l;
+    int b;
+    public void Area(int l,int b){
+        this.l=l;
+        this.b=b;
+        double result=0.5*l*b;
+        System.out.println("triangle: "+result);
+    }
+}class Circle extends Shape{
+    int r;
+    final double pi=3.14;
+    public void Area(int r){
+        this.r=r;
+
+        double result=pi*r*r;
+        System.out.println("circle: "+result);
+    }
+}
+public class Main{
+    public static void main(String[]args){
+        Rectangle r=new Rectangle();
+        Triangle t=new Triangle();
+        Circle c= new Circle();
+r.Area(10,12);
+t.Area(10,11);
+c.Area(4);
+
+
+    }}
