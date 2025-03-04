@@ -1,0 +1,54 @@
+REVERSE THE LINE OF THE TEXT
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        System.out.print("Enter the Text:");
+        Scanner d=new Scanner(System.in);
+
+        String str=d.nextLine();
+        String rev= reverseword(str);
+        System.out.println(rev);
+
+
+    }
+    public static String reverseword(String str){
+        String words[]=str.split(" ");
+        StringBuilder result=new StringBuilder();
+        for(int i=words.length-1;i>=0;i--){
+            result.append(words[i]).append(" ");
+
+        }
+
+---------------------------------------------------------------------------------------------------
+STRING EXPANDING PROGRAM
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner d=new Scanner(System.in);
+        System.out.print("enter a String:");
+        String input=d.nextLine();
+
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < input.length(); i++) {
+            char ch = input.charAt(i);
+            if (ch >= '0' && ch <= '9') {
+                int count = ch - '0';
+                char prevChar = result.charAt(result.length() - 1);
+                while (count > 1) {
+                    result.append(prevChar);
+                    count--;
+                }
+            } else {
+                result.append(ch);
+            }
+        }
+
+        System.out.println(result);
+    }
+}
+
+    return result.toString().trim();
+}}
