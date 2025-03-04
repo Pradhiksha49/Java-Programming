@@ -1,0 +1,22 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args) {
+        Scanner d=new Scanner(System.in);
+        System.out.println("enter a String");
+        String str=d.nextLine();
+        d.close();
+        Stringbuilder(str);
+     }
+      public static void Stringbuilder( String str){
+
+      String  og=new StringBuilder(str).reverse().toString();
+
+      if(str.equals(og)){
+          System.out.println("it is palindrome");
+      }
+      else{
+          System.out.println("it not a palindrome");
+      }
+
+    }
+}v
