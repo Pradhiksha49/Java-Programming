@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+       Scanner sc = new Scanner(System.in);
+      String String1 = sc.nextLine();
+        String String2 = sc.nextLine();
+        if (String1.length() != String2.length()) {
+            System.out.println("NO");
+            return;
+        }
+        int[] Count1 = new int[26];
+        int[] Count2 = new int[26];
+        for (int i = 0; i < String1.length(); i++) {
+            Count1[String1.charAt(i) - 'a']++;
+            Count2[String2.charAt(i) - 'a']++;
+        } for (int i = 0; i < 26; i++) {
+            if (Count1[i] != Count2[i]) {
+                System.out.println("NO");
+                return;
+            }
+        }System.out.println("YES");
+    }
+}
+    
