@@ -1,0 +1,14 @@
+public class Main {
+    public static void main(String[] args) {
+        int n=4;
+        int result=1;
+        for(int i=1;i<=n;i++){
+          int sum=0;
+          for(int j=0;j<i;j++){
+              sum=sum+result;
+          }
+      result    =sum;
+        }
+        System.out.println(result);
+    }
+}
