@@ -1,0 +1,31 @@
+public class Main {
+    public static void main(String[] args) {
+        int a[]={1,2,3,4,5,6};
+        int d=2;
+        left(a,d);
+        for(int num:a){
+            System.out.print(num+" ");
+        }
+
+    }
+    public static void left(int a[],int d){
+        int n=a.length;
+        d%=n;
+        reverse(a,0,d-1);
+        reverse(a,d,n-1);
+        reverse(a,0,n-1);
+
+    }
+    public static void  reverse(int a[],int s,int e){
+        while(s<e){
+            int temp=a[s];
+            a[s]=a[e];
+            a[e]=temp;
+            s++;
+            e--;
+        }
+    }
+}
+
+
+
