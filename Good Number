@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+        int og=18;
+        int n=og;
+        int sum=0;
+        while(n>0){
+            int d=n%10;
+             sum+=d;
+            n/=10;
+        }
+        System.out.println(og%sum==0?"Good number":"Bad number");
+    }
+}
