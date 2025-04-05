@@ -1,0 +1,18 @@
+public class Main {
+    public static void main(String[] args) {
+        int v=4;
+        int w=11;
+        int x=0,y=0;
+
+            y=(w-(2*v))/2;
+            x=v-y;
+            if(w%2!=0){
+                System.out.println(-1);
+            }
+            else {
+                System.out.println(x+" "+y);
+            }
+
+
+    }
+}
