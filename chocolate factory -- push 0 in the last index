@@ -1,0 +1,20 @@
+public class Main {
+    public static void main(String[] args) {
+        int n[]={4,5,0,1,9,0,5,0};
+        int index=0;
+        for(int i=0;i<n.length;i++){
+            if(n[i]!=0){
+               n[index]=n[i];
+               index++;
+            }}
+            while(index<n.length){
+                n[index]=0;
+                index++;
+            }
+
+        for (int num : n) {// to print the array using this method;
+            System.out.print(num + " ");
+        }
+    }
+
+}
