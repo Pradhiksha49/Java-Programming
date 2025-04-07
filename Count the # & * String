@@ -1,0 +1,32 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner d=new Scanner(System.in);
+        System.out.println("enter a String");
+        String n=d.nextLine();
+           int hashcount=0, starcount=0;
+        for(int i=0;i<n.length();i++){
+            int ch=n.charAt(i);
+            if(ch=='#'){
+               hashcount++;
+            }
+        }
+        for(int j=0;j<n.length();j++){
+            int ch1=n.charAt(j);
+            if(ch1=='*'){
+                starcount++;
+            }
+        }
+        if(hashcount==starcount){
+            System.out.println("0");
+        }
+        else if(hashcount>starcount){
+            System.out.println("Negative Integer");
+        }
+        else{
+            System.out.println("Postive Integer");
+        }
+
+    }
+}
+         
