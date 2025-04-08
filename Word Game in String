@@ -1,0 +1,23 @@
+import java .util.*;
+public  class Main {
+    public static void main(String[] args) {
+        Scanner d=new Scanner(System.in);
+        String input=d.nextLine();
+        String a[]= input.split(" ");
+        if(a.length>0) {
+            System.out.print(a[0]+" ");
+            String prev = a[0];
+
+            for (int i = 0; i < a.length; i++) {
+                String curr = a[i];
+
+                char firstch=curr.charAt(0);
+                char lastch=prev.charAt(prev.length()-1);
+
+
+                if(firstch==lastch){
+                    System.out.print(curr+" ");}
+                prev=curr;
+
+            }}}
+}
