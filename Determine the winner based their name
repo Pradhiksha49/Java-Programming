@@ -1,0 +1,30 @@
+public class Main {
+    public static void main(String[] args) {
+        String  a="BASKAR";
+        int n=a.length();
+      if(a.matches(".*[a-z].*")&&a.matches(".*//d.*")) {
+          System.out.println("invalid input");
+      }
+if(n<3){
+        System.out.println("No");
+}
+boolean first=(a.charAt(0)=='B'||a.charAt(0)=='L');
+boolean last=(a.charAt(n-1)=='R'||a.charAt(n-1)=='E');
+
+boolean mid=false;
+for(int i=0;i<n-1;i++){
+    if(a.charAt(i)=='K')
+    mid=true;
+}
+if(first&&last&&mid){
+    System.out.println("Yes");
+}else{
+    System.out.println("No");
+}
+
+
+        }
+                }
+
+
+
