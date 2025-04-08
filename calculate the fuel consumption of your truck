@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter litre:");
+        int l=sc.nextInt();
+        System.out.println("enter distance:");
+        int d=sc.nextInt();
+        if(l<0||d<0){
+            System.out.println("Invalid Input");
+return;
+        }
+        double fuel=((double)l/d)*100;
+        System.out.printf("Liters per 100km:"+"%.2f\n",fuel);
+        double mile=d*0.6214;
+        double gallon=l*0.2642;
+        double find=mile/gallon;
+        System.out.printf("Miles per gallon:"+"%.2f\n",find);
+    }
+}
