@@ -1,0 +1,32 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        String s="5,10,20,40,80";
+        String part[]=s.split(",");
+        System.out.println(Arrays.toString(part));
+        int n=part.length;
+        int a[]=new int[n];
+        for(int i=0;i<n;i++){
+            a[i]=Integer.parseInt(part[i]);
+        }
+        boolean AP=a[1]-a[0]==a[2]-a[1];
+        boolean GP=a[1]/a[0]==a[2]/a[1];
+if(AP) {
+    int r = 0;
+    r = a[1]-a[0];
+    int res = a[n - 1] + r;
+    System.out.println(res);
+}
+else if(GP){
+
+    int r = 0;
+    r = a[1]/a[0];
+    int res = a[n - 1] * r;
+    System.out.println(res);
+
+
+}
+else {
+    System.out.println("neither AP nor GP");
+}
+    }}
