@@ -1,0 +1,41 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner d=new Scanner(System.in);
+        System.out.println("Enter a Plaintext");
+        String text =d.nextLine();
+        System.out.println("Enter a key");
+       int key =d.nextInt();
+
+        if(key<0||key>25){
+            System.out.println("Invalid Input");
+            return;
+
+        }
+String encrypted="";
+for(int i=0;i<text.length();i++){
+    char ch=text.charAt(i);
+if(ch>='A'&& ch<='Z'){
+    char newchar=(char)(((ch-'A'+key)%26)+'A');
+    encrypted+=newchar;
+}
+else if (ch>='a'&& ch<='z'){
+        char newchar=(char)(((ch-'a'+key)%26)+'a');
+        encrypted+=newchar;
+    }
+
+else if (ch>='0'&& ch<='9'){
+        char newchar=(char)(((ch-'0'+key)%26)+'0');
+        encrypted+=newchar;
+
+
+}
+else{
+    encrypted+=ch;
+}
+
+
+}
+
+        System.out.println(encrypted);
+    }}
