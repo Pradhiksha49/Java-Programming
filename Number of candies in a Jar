@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner d=new Scanner(System.in);
+        System.out.println(" NUMBER OF CANDIES AVAILABLE:");
+        int org=d.nextInt();
+        System.out.println("NUMBER OF CANDIES SOLD:");
+        int input=d.nextInt();
+        int k=5; int N=org;
+if(N<input){
+    System.out.println("Invalid Input");
+
+}
+
+int result=N-input;
+        System.out.println("NUMBER OF CANDIES SOLD :"+input);
+        System.out.print("NUMBER OF CANDIES LEFT :"+result);
+if(N<=k){
+    org=N;
+    System.out.println("JAR IS REFILL");
+}
+    }
+}
