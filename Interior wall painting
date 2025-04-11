@@ -1,0 +1,28 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner d=new Scanner(System.in);
+        int In=d.nextInt();
+        int En=d.nextInt();
+        double a[]=new double[In];
+        for(int i=0;i<In;i++){
+            a[i]=d.nextDouble();
+        }
+        System.out.println("enter exterior");
+
+        double b[]=new double[In];
+        for(int i=0;i<  En;i++){
+            b[i]=d.nextDouble();
+        }
+        double total_Inter=0;
+        for(int i=0;i<In;i++){
+         total_Inter+=a[i]*18;
+}
+        double total_Exter=0;
+        for(int i=0;i<En;i++){
+            total_Exter+=b[i]*12;
+        }
+    double result=total_Inter+total_Exter;
+        System.out.println("Total estimated Cost :"+result+" INR");
+
+    }}
