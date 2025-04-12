@@ -1,0 +1,25 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner d = new Scanner(System.in);
+
+        int n = d.nextInt();
+        int a[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            a[i] = d.nextInt();
+        }
+          int lsum=0,rsum=0;
+        for(int i=0;i<n;i++){
+            rsum=rsum+a[i];
+        }
+        for(int j=0;j<n;j++){
+            rsum=rsum-a[j];
+
+        if(lsum==rsum){
+            System.out.println( j);
+            return;
+        }
+        lsum=lsum+a[j];
+        }
+            System.out.println( -1);}}
+         
