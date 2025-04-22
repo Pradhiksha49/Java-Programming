@@ -1,0 +1,21 @@
+//Consider the following series :
+0, 0, 2, 1, 4, 2, 6, 3, 8, 4, 10, 5, 12, 6, 14, 7, 16, 8//
+  
+  import java.util*;
+public class Main{
+    public static void main(String[] args) {
+        Scanner d=new Scanner(System.in);
+        int n=d.nextInt();
+
+            System.out.println(nthterm(n));
+
+    }
+    public static int nthterm(int n){
+        if(n%2==1){
+            return 2*(n/2);
+        }
+        else{
+            return nthterm(n-1)/2;
+        }
+    }
+}
