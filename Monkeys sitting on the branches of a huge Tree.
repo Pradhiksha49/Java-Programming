@@ -1,0 +1,19 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner d = new Scanner(System.in);
+        System.out.println("Total no of Monkeys");
+        int n = d.nextInt();
+        System.out.println("Number of eatable Bananas");
+        int k = d.nextInt();
+
+        System.out.println("Number of eatable Peanuts");
+        int j = d.nextInt();
+
+        System.out.println("Total number of Bananas");
+        int m= d.nextInt();
+        System.out.println("Total number of Peanut");
+        int p= d.nextInt();
+        int result=n-((m/k)+(p/j));
+
+        System.out.println(result);}}
