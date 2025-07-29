@@ -9,7 +9,7 @@ class Main {
             b.append(Character.toLowerCase(ch));
            }
            else if(Character.isLowerCase(ch)){
-               b.append(Character.toUpperCase());
+               b.append(Character.toUpperCase(ch));
            }
        }
        System.out.print(b);
