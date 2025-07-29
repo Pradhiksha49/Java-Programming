@@ -1,0 +1,32 @@
+class student{
+    static int startingRegNo=1000;
+    String name;
+     int regNo;
+    String dept;
+    String emailId;
+student(String name,String dept,String emailId){
+    regNo=startingRegNo++;
+    this.name=name;
+    this .dept=dept;
+    this.emailId=emailId;
+}
+void print(){
+    System.out.println("RegNo: "+regNo);
+    System.out.println("Name: "+name);
+    System.out.println("Dept: "+dept);
+    System.out.println("email: "+emailId);
+}
+
+}
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        student obj=new    student("Pradhiksha","IT","pradhiksha.m121@gmail.com");
+        obj.print();
+       // student obj1=new    student();
+       // student obj2=new    student();
+    }
+
+}
