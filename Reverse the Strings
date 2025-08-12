@@ -1,0 +1,18 @@
+import java.util.LinkedList;
+import java.util.Collections;
+
+public class Main {
+    public static void main(String[] args) {
+        LinkedList<String> list = new LinkedList<>();
+
+        String s = "Better then Yesterday";
+        String[] words = s.split(" ");
+        for (String word : words) {
+            list.add(word);
+        }
+        Collections.reverse(list);
+        for (String word : list) {
+            System.out.print(word + " ");
+        }
+    }
+}
