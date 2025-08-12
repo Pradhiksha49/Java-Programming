@@ -1,0 +1,50 @@
+import java.util.LinkedList;
+public class Main {
+    public static void main(String[] args) {
+        LinkedList<Integer> list = new LinkedList<>();
+        LinkedList<Integer> evenlist = new LinkedList<>();
+int k=2;
+       list.add(2);
+        list.add(5);
+        list.add(8);
+        list.add(11);
+        list.add(14);
+        list.add(7);
+
+       for(int num:list) {
+           if (num % 2 == 0) {
+               evenlist.add(num);
+           }
+       }
+
+       int n=evenlist.size();
+       if(n==0){
+           return;
+       }
+       k=k%n;
+       for(int i=0;i<k;i++){
+           int last =evenlist.removeLast();
+           evenlist.addFirst(last);
+       }
+       int index=0;
+       for(int i=0;i< list.size();i++){
+           if(list.get(i)%2==0){
+               list.set(i, evenlist.get(index++));
+           }
+       }
+
+        System.out.println(list);
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
